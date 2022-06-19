@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "attach",
+            "type": "erlang",
+            "request": "launch",
+            "projectnode": "erl-test@localhost",
+            "cookie": "COOKIE",
+            "timeout": 300,
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "name": "start",
+            "type": "erlang",
+            "request": "launch",
+            "runinterminal": [
+                "rebar3",
+                "shell",
+                "--sname",
+                "erl-test@localhost",
+                "--setcookie",
+                "COOKIE"
+            ],
+            "projectnode": "erl-test@localhost",
+            "cookie": "COOKIE",
+            "timeout": 300,
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "name": "start clean",
+            "type": "erlang",
+            "request": "launch",
+            "runinterminal": [
+                "rebar3",
+                "shell",
+                "--sname",
+                "erl-test@localhost",
+                "--setcookie",
+                "COOKIE",
+                "--start-clean"
+            ],
+            "projectnode": "erl-test@localhost",
+            "cookie": "COOKIE",
+            "timeout": 300,
+            "cwd": "${workspaceRoot}"
+        }
+    ]
+}
